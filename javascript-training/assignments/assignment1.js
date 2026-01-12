@@ -1,4 +1,5 @@
-//Assignment 1
+//Assignment 1 : JavaScript
+
 //1 -> Temperature of a city in degrees Celsius
 let tempInCelcius = 25.5;
 console.log("Temperature of a city in degrees Celsius:", tempInCelcius);
