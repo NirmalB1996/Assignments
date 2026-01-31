@@ -20,6 +20,7 @@ let amountCurrent: number = numTransactions[0] ?? 0;
 //loop through the transactions array and classify transactions
 for(let i=0; i<numTransactions.length; i++){
     amountCurrent = numTransactions[i] ?? 0;
+    totalTransactionsSum += amountCurrent;
     if(checkTransaction(amountCurrent)){
         creditTransactionsCount++;
         creditTransactionsSum += amountCurrent;
@@ -36,10 +37,11 @@ for(let i=0; i<numTransactions.length; i++){
             console.log("Suspicious Debit Transaction of", amountCurrent, "detected.");
         }
     }
-    totalTransactionsSum += amountCurrent;
+    
 }
 console.log("Total Credit Transactions:", creditTransactionsCount);
 console.log("Total Debit Transactions:", debitTransactionsCount);
 console.log("Sum of Credit Transactions:", creditTransactionsSum);
 console.log("Sum of Debit Transactions:", debitTransactionsSum);
+console.log("Total Sum of Transactions:", totalTransactionsSum);
 console.log("Total Suspicious Transactions:", countSuspiciousTransactions);
